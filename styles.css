@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Radley&family=Roboto+Slab:wght@200;300;400&display=swap');
+
+body {
+    font-family: 'Roboto Slab', serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Radley', serif;
+}
+
+a {
+    font-style: none;
+    color: unset;
+    text-decoration: none;
+}
+
+span {
+    color: #FF0000;
+    text-shadow: 13px;
+}
+
+header, h1 {
+    text-align: center;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+section > input, select, button, label {
+    margin: 4px 6px;
+}
+
+input, select {
+    height: 30px;
+}
+
+button {
+    height: 25px;
+    background-color: #FF0000;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 15px;
+    display: inline-flex;
+    align-items: center;
+    font-size: 1.05em;
+}
+
+button:hover, a:hover {
+    background-color: #f84444;
+    font-size: 1.07em;
+    cursor: pointer;
+}
+
+main {
+    margin: 15px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section > div {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+#videoUrl {
+    background-color: #f8f4f4;
+    border-radius: 50px;
+    padding-left: 10px;
+    border: none;
+  }
+
+@media only screen and (min-width: 875px) {
+    #videoUrl {
+      width: 550px;
+    }
+  }
+
+
+@media only screen and (max-width: 458px) {
+    #videoUrl {
+      width: 390px;
+    }
+    img {
+        width: 390px;
+    }
+  }
+
+  @media only screen and (max-width: 390px) {
+    section > div {
+        flex-wrap: wrap;
+    }
+    img {
+        width: 300px;
+    }
+  }

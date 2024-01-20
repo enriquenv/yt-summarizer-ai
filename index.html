@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/styles.css">
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
         j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -10,31 +10,30 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="yt-icon.png">
+    <link rel="icon" type="image/png" href="/assets/img/yt-icon.png">
     <title>YTSummarizer</title>
 </head>
 <body>
     <div class="container">
         <header>
-        <a href="/"><h1><span>YT</span>Summarizer</h1></a>
+        <a href="https://enriquenv.github.io/yt-summarizer-ai/"><h1><span>YT</span>Summarizer</h1></a>
             <section>
                 <input type="text" id="videoUrl" placeholder="Enter YouTube video URL">
 
                 <div>
                 Translate?
                 <input type="radio" id="no" name="translate" value="no" checked><label for="no">No</label>
-                <input type="radio" id="yes" name="translate" value="yes">
-                <label for="yes">Yes</label><br>
-                
+                <input type="radio" id="yes" name="translate" value="yes"><label for="yes">Yes</label>
                 <select id="language" style="display: none;" onchange="checkLanguage()">
-                    <option value="in English">English</option>
-                    <option value="in Spanish">Castellano</option>
-                    <option value="in French">Français</option>
-                    <option value="in Portuguese">Português</option>
-                    <option value="in German">Deutsch</option>
-                    <option value="in Russian">Русский</option>
-                    <option value="in Arabic">اَلْعَرَبِيَّة</option>
-                    <option value="in Mandarin">官話</option>
+                    <option value="no_translation" selected disabled hidden>Choose language</option>
+                    <option value="English">English</option>
+                    <option value="Spanish">Castellano</option>
+                    <option value="French">Français</option>
+                    <option value="Portuguese">Português</option>
+                    <option value="German">Deutsch</option>
+                    <option value="Russian">Русский</option>
+                    <option value="Arabic">اَلْعَرَبِيَّة</option>
+                    <option value="Mandarin">官話</option>
                     <option value="Other">Other</option>
                 </select>
                 <input type="text" id="otherLanguage" placeholder="Enter language" style="display: none;">
@@ -45,10 +44,11 @@
         </header>
 
         <main>
-        <img id="loading" src="robot.gif" style="display: none;">
+        <img id="loading" src="/assets/img/robot.gif" style="display: none;">
         <div id="summary"></div>
+        <button id="copyButton" style="display: none;">Copy & Share</button>
         </main>
     </div>
-    <script src="script.js"></script>
+    <script src="/assets/js/script.js"></script>
 </body>
 </html>

@@ -33,7 +33,6 @@ function submit() {
         videoId = videoUrl.split('v=')[1].split('&')[0];
     }
     var language = document.getElementById('language').value;
-    console.log(language);
     if (language === 'Other') {
         language = document.getElementById('otherLanguage').value;
         console.log(language);
@@ -42,7 +41,6 @@ function submit() {
         videoId: videoId,
         sumLang: language
     };
-    console.log(data);
     document.getElementById('loading').style.display = 'block';
     fetch('https://zii9141p4i.execute-api.us-east-1.amazonaws.com/dev', {
         method: 'POST',
